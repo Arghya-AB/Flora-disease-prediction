@@ -1,8 +1,11 @@
 import tensorflow as tf
 import random
 import numpy as np
-
+import os
 import pathlib
+
+if not os.path.exists("datasets"):
+    os.makedirs("datasets")
 
 dataset_url = "https://archive.ics.uci.edu/ml/machine-learning-databases/00486/rice_leaf_diseases.zip"
 data_dir = tf.keras.utils.get_file(
